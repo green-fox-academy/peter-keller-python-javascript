@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>day5</title>
+<style>
+    .line {
+        background-color:#DCD6CD;
+    }
+    .background {
+        box-sizing: border-box;
+        height:800px;
+        width:820px;
+        background-color:#DCD6CD;
+        padding-top:20px;
+        
+    }
+    .top {
+        box-sizing: border-box;
+        background-color: #DCD6CD;
+        width:100%;
+        height:45px;
+        border: 15px solid #DCD6CD;
+        padding:0;
+        margin-bottom:20px;
+    }
+    .left, .right {
+        box-sizing: border-box;
+        background-color: #DCD6CD;
+        border: 15px solid #DCD6CD;
+        width: 49.7%;
+        height: 410px;
+        display:inline-block;
+    }
+    .bottom {
+        box-sizing: border-box;
+        width: 100%;
+        height: 160px;
+        background-color:#DCD6CD;
+        border: 15px solid #DCD6CD;
+        margin-top:20px;
+    }
+    h1 {
+        background: green;
+
+    }
+    
+    
+</style>
+</head>
+<body>
+    <div class="top">
+    <h2>Profil</h2>
+    </div>
+<form>
+    <div class="background">
+    <div class="left">
+        <h1>Személyes adatok</h1>
+        <article>Név<input type="name"></article>
+        <article>Születési éved<input type="number" placeholder="pl.1984"></article>
+        <article>Nemed<input radio="name">
+            <input type="radio" name="selector"><label for="1stbutton">nő</label></article>
+            <input type="radio" name="selector"><label for="1stbutton">férfi</label></article>
+        <p>Milyen márkákat szeretsz?</p>
+            <input type="checkbox">Adidas</article>
+            <input type="checkbox">Apple</article>
+            <input type="checkbox">Coca-Cola</article>
+            <input type="checkbox">Mazda</article>
+            <input type="checkbox">Nike</article>
+            <input type="checkbox">Opel</article>
+            <input type="checkbox">Ray-Ban</article>
+            <input type="checkbox">Starbucks</article>
+            <input type="checkbox">Tesla</article>
+            <input type="checkbox">Yahoo</article>
+
+           <p>Többet is választhatsz!</p>
+    </div>
+    
+    <div class="right">
+        <h1>Kapcsolat</h1> 
+        <article>Telefonszám<input type="tel" placeholder="+36 --- ----"></article>
+        <article>E-mail cím<input type="email" placeholder="nev@domain.hu"></article>
+        <article>Facebook profilod<input type="username" placeholder="http://facebook.com..."></article>
+        <article>Twitter profilod<input type="username" placeholder="http://twitter.com..."></article>
+        <article>Milyen házban laksz?</article>
+        <select>
+            <option>Családi ház</option>
+            <option>Ikerház</option>
+            <option>Lakás</option>
+        </select>
+    </div>
+    <div class="bottom"></div>
+        <p>Bemutatkozás</p>
+        <input type="text" placeholder="Írj magadról pár mondatot!">
+    </div>
+    </div>
+</form>
+</body>
+</html>
