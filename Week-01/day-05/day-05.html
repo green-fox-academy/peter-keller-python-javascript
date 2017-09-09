@@ -1,100 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>day5</title>
 <style>
-    .line {
-        background-color:#DCD6CD;
+    body {
+        padding: 50px;
+        font-family: 'Roboto', sans-serif;
+        margin: auto;
+        width:50%;
     }
-    .background {
+    .container {
         box-sizing: border-box;
-        height:800px;
-        width:820px;
-        background-color:#DCD6CD;
-        padding-top:20px;
-        
+        height:1000px;
+        width:800px;
+        background:#DCD6CD;
+        padding:70px 60px 70px 60px;  
     }
-    .top {
-        box-sizing: border-box;
-        background-color: #DCD6CD;
+    div {
+        display:inline-block; 
+        margin:0;
+        box-sizing:border-box;
+    }
+    .half {
+        width:49%;
+        padding:10px;
+        vertical-align: top;
+    }
+    .full {
         width:100%;
-        height:45px;
-        border: 15px solid #DCD6CD;
-        padding:0;
-        margin-bottom:20px;
+        padding:10px;
+        vertical-align: top;
     }
-    .left, .right {
-        box-sizing: border-box;
-        background-color: #DCD6CD;
-        border: 15px solid #DCD6CD;
-        width: 49.7%;
-        height: 410px;
-        display:inline-block;
+    .header {
+        padding:10px;
+        margin-bottom:10px;
+        border:0;
+        border-radius:2px;
+        text-decoration: none;
+        background: #938c97;
+        color: white;
+        width:100%;
+        font-size: 18px;
+    }
+    .input {
+        width:100%;
+        height: 40px;
+        margin-top:5px;
+        padding-left:10px;
+        box-sizing: border-box; }
+    .red star {
+        color:red;
+        text-align: left;
+    }
+    .inside {
+        padding: 0px;
+        margin-top: 5px;
+    }
+    article {
+        margin-bottom: 10px;
+    }
+    #year {
+        width: 80px;
+    }
+    p {
+        color:#cc9900
+    }
+    #profil {
+        font-size: 24px;
+    }
+    .space {
+        line-height: 145%
+    }
+    .button {
+        font-family: Consolas;
+        width: 40%;
+        padding: 7px;
+        font-size:18px;
+        text-transform: uppercase;
+    }
+    .textdecor {
+        text-decoration: underline;
+    }
+    .save {
+        width: 85%;
+        font-size: 18px;
+        background-color: #4c4463;
+        font-family: Consolas;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    .delete {
+        width: 70%;
+    }
+    .right {
+        text-align: right;
+    }
+    input[type="checkbox"] {
+        width:20px;
+        height:20px;
+    }
+    input[type="radio"] {
+        width:20px;
+        height: 20px;
+    }
+    .area {
+        width:100%;
+        box-sizing:border-box;
+        padding: 10px;
+        height: 130px;
+    }
+    span {
+        font-weight: bold;
+        color: #2a2a2a;
     }
     .bottom {
-        box-sizing: border-box;
-        width: 100%;
-        height: 160px;
-        background-color:#DCD6CD;
-        border: 15px solid #DCD6CD;
-        margin-top:20px;
+        margin-bottom: 10px;
     }
-    h1 {
+    .radio {
+        position: relative;
+        transform: translateY(25%)
+    }
+    .rm-top-padding {
+        padding: 0px 10px 0px 10px;
+    }
 
-    }
-    
-    
+
 </style>
-</head>
+    </head>
 <body>
-    <div class="top">
-    <h2>Profil</h2>
-    </div>
-<form>
-    <div class="background">
-    <div class="left">
-        <h1>Személyes adatok</h1>
-        <article>Név<input type="name"></article>
-        <article>Születési éved<input type="number" placeholder="pl.1984"></article>
-        <article>Nemed<input radio="name">
-            <input type="radio" name="selector"><label for="1stbutton">nő</label></article>
-            <input type="radio" name="selector"><label for="1stbutton">férfi</label></article>
-        <p>Milyen márkákat szeretsz?</p>
-            <input type="checkbox">Adidas</article>
-            <input type="checkbox">Apple</article>
-            <input type="checkbox">Coca-Cola</article>
-            <input type="checkbox">Mazda</article>
-            <input type="checkbox">Nike</article>
-            <input type="checkbox">Opel</article>
-            <input type="checkbox">Ray-Ban</article>
-            <input type="checkbox">Starbucks</article>
-            <input type="checkbox">Tesla</article>
-            <input type="checkbox">Yahoo</article>
+    <div class="container">
+        <div class="full"><span id="profil">Profil</span></div>
+        <form>
+            <div class="half">
+                <div class="header">Személyes adatok</div>
+                <article>
+                    <span>Név</span><span class="red-star">*</span>
+                    <input type="text" name="name" class="input">
+                </article>
+                <div class="half inside ">
+                    <article class="space">
+                        <span>Születési éved</span><br />
+                        <input id="year" type="text" name="year" class="input" placeholder="pl.1984">
+                    </article>
+                </div>
+                <div class="half inside bottom">
+                    <article class="space">
+                        <span>Nemed</span><br />
+                        <div class="radio bottom">
+                        <input type="radio" name="gender" value="female">nő&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="male">férfi
+                        </div>
+                    </article>
+                </div>
+                <article>
+                    <span>Milyen márkákat szeretsz?</span><br />
+                    <div class="half inside space">
+                    <input type="checkbox" name="brand" value="Adidas">Adidas<br />
+                    <input type="checkbox" name="brand" value="Apple">Apple<br />
+                    <input type="checkbox" name="brand" value="Coca-Cola">Coca-Cola<br />
+                    <input type="checkbox" name="brand" value="Mazda">Mazda<br />
+                    <input type="checkbox" name="brand" value="Nike">Nike
+                    </div>
+                    <div class="half inside space">
+                    <input type="checkbox" name="brand" value="Opel">Opel<br />
+                    <input type="checkbox" name="brand" value="Ray-Ban">Ray-Ban<br />
+                    <input type="checkbox" name="brand" value="Starbucks">Starbucks<br />
+                    <input type="checkbox" name="brand" value="Tesla">Tesla<br />
+                    <input type="checkbox" name="brand" value="Yahoo">Yahoo
+                    </div>
+                    <p>Többet is választhatsz!</p>
+                </article>
+            </div>
 
-           <p>Többet is választhatsz!</p>
-    </div>
-    
-    <div class="right">
-        <h1>Kapcsolat</h1> 
-        <article>Telefonszám<input type="tel" placeholder="+36 --- ----"></article>
-        <article>E-mail cím<input type="email" placeholder="nev@domain.hu"></article>
-        <article>Facebook profilod<input type="username" placeholder="http://facebook.com..."></article>
-        <article>Twitter profilod<input type="username" placeholder="http://twitter.com..."></article>
-        <article>Milyen házban laksz?</article>
-        <select>
-            <option>Családi ház</option>
-            <option>Ikerház</option>
-            <option>Lakás</option>
-        </select>
-    </div>
-    <div class="bottom"></div>
-        <p>Bemutatkozás</p>
-        <input type="text" placeholder="Írj magadról pár mondatot!">
-    </div>
-    </div>
-</form>
+
+           <div class="half">
+				<div class="header">Kapcsolat</div>
+				<article>
+					<span>Telefonszám</span><span class="red-star">*</span>
+					<input type="text" name="number" class="input" placeholder="+36 - -  - - -  - - - -">
+				</article>
+				<article>
+					<span>E-mail cím</span><span class="red-star">*</span>
+					<input type="email" name="email" class="input" placeholder="nev@domain.hu">
+				</article>
+				<article>
+					<span>Facebook profilod</span>
+					<input type="text" name="facebook" class="input" placeholder="http://facebook.com/">
+				</article>
+				<article>
+					<span>Twitter profilod</span>
+					<input type="text" name="twitter" class="input" placeholder="http://twitter.com">
+				</article>
+				<article>
+					<span>Milyen házban laksz?</span><br />
+					<select name="flat" class="input">
+					<option value="volvo" selected="selected">Válassz típust!</option>
+					<option value="big">Nagy</option>
+					<option value="middle">Közepes</option>
+					<option value="small">Kicsi</option>
+					</select>
+				</article>
+
+			</div>
+			<div class="full rm-top-padding">
+			<article>
+				<span class="space">Bemutatkozás</span><span class="red-star">*<br />
+				<textarea class="area" name="comment" placeholder="Írj magadról pár mondatot!"></textarea>
+			</article>
+			</div>
+			<div class="full rm-top-padding bottom">
+			<article class="space">
+				<span>CV feltöltése</span><br />
+				<input type="button" class="button" value="Feltöltés">
+			</article>
+			<br />
+			<article class="space">
+					<input type="checkbox" name="check" value="checkok">
+					<label>Elfogadom a <span style="textdecor">felhasználási feltételeket</span></label>
+			</article>
+			</div>
+			<div class="half">
+			<input type="button" class="save" value="Mentés">
+			</div>
+			<div class="half right">
+			<input type="button" class="button delete" value="Űrlap feltöltése">
+			</div>
+		</form>
+	</div>
 </body>
 </html>
