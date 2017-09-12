@@ -7,3 +7,7 @@
 # ****
 #
 # The triangle should have as many lines as the number was
+number = int(input("Insert number: "))
+star = "*" 
+for i in range (1, (number+1)):
+    print(star*(i))
