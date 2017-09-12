@@ -5,3 +5,11 @@
 # The stored number is higher
 # The stried number is lower
 # You found the number: 8
+num = 8
+guess = int(input("Insert number: "))
+if guess < num:
+    print("The stried number is lower")
+elif guess > num:
+    print("The stored number is higher")
+else:
+    print("You found the number: 8")
