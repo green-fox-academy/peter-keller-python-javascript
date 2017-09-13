@@ -13,18 +13,21 @@ students = [
 # create a function that takes a list of students and prints:
 # - Sum of the age of people who have lass than 5 candies
 
-def candy():
+def sumcandy(students):
     candy = 0
-    for i in range (0,len(students)):
-        print(students[i]['name'] + ":" + str(students[i]['candies']))
+    for student in students:
+        candy += student["candies"]
+    return candy
+        #print(students[i]['name'] + ":" + str(students[i]['candies']))
 
-candy()
+sumcandy(students)
 
 def age(students):
     age_counter = 0
     for student in students:
         if student["candies"] < 5:
             age_counter += student["age"]
-    print(age_counter)
+    return age_counter
 
-age(students)
+print(sumcandy(students))
+print(age(students))
