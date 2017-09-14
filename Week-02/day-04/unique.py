@@ -7,4 +7,4 @@ def remove_duplicates(x):
             a.append(i)
     return a
 
-print(remove_duplicates([1,2,2,3,3,4]))
+print(remove_duplicates(1))
