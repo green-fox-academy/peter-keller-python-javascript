@@ -3,7 +3,6 @@
 # - Print the result of `doubling(ak)`
 ak = 123
 def doubling(m):
-    m*=2
-    print(m)
-
-doubling(ak)
+    return m*2
+    
+print(doubling(ak))
