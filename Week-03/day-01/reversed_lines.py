@@ -15,12 +15,12 @@ def decrypt(file_name):
     except IOError:
         print("Unable to read the file: ", file_name)
     try:
-        destination = open("single-chars.txt", "w")
+        destination = open("correct.txt", "w")
         destination.write(text)
         destination.close()
     except IOError:
         print("Unable to write files to this location")
 def main():
-    decrypt("duplicated-chars.txt")
+    decrypt("reversed-lines.txt")
 main()
 
