@@ -8,8 +8,7 @@ preverb = "be"
 
 def new_verbs(preverb):
     for i in range(len(verbs)):
-        stuff = preverb + verbs[i]
-        print(stuff)
+        mod_verb = preverb + verbs[i]
+        print(mod_verb)
 
 new_verbs(preverb)
-

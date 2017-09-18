@@ -17,24 +17,24 @@
 # Exit
 def calculator(procedure,op1,op2):
     if procedure == "+":
-        result = op1 + op2
+        end_result = op1 + op2
     elif procedure == "-":
-        result = op1 - op2
+        end_result = op1 - op2
     elif procedure == "*":
-        result = op1 * op2
+        end_result = op1 * op2
     elif procedure == "/":
         if op2 != 0:
-            result = op1 / op2
+            end_result = op1 / op2
         else:
-            result = "It doesn't make sense!!!"
+            end_result = "You can't divide with 0"
     elif procedure == "%":
         if op2 != 0:
-            result = op1 % op2
+            end_result = op1 % op2
         else:
-            result = "It doesn't make sense!!!"
+            end_result = "It doesn't make sense!!!"
     else:
-        result = "No information given"
-    print("The result is: ", result)
+        end_result = "No operator given"
+    print("The result is: ", end_result)
 
 input1, input2, input3 = input("Please type in something: ").split()
 calculator(input1,int(input2),int(input3))
