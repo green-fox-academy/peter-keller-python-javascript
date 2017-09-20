@@ -13,22 +13,9 @@ def line_to_center(x, y,a,b, color):
 i = 0
 while(i <= 150):
     line_to_center(i, 150, 150, 150 - i, "green")
-    i += 10
-
-i = 0
-while(i <= 150):
-    line_to_center(150 + i, 150, 150, i, "green")
-    i += 10
-i = 0
-while(i <= 150):
     line_to_center(i, 150, 150, 150 + i, "green")
-    i += 10
-
-i = 0
-while(i <= 150):
+    line_to_center(150 + i, 150, 150, i, "green")
     line_to_center(150 + i, 150, 150, 300 - i, "green")
     i += 10
-
-
 
 root.mainloop()
