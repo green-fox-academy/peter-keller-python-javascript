@@ -14,42 +14,15 @@ def line_to_center(x, y,a,b, color):
 i = 0
 while(i <= 150):
     line_to_center(0, i, i, 150, "green")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(150 - i, 0, 150, 150 - i, "purple")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(150, i, 150 + i, 150, "green")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(150 + i, 0, 300, i, "purple")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(0, 150 + i, i, 300 , "green")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(i, 150, 150, 150 + i, "purple")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(150,150 + i,150 + i, 300, "green")
-    i += 10
-
-i = 0
-while(i <= 150):
     line_to_center(150 + i, 150, 300, 150 + i, "purple")
     i += 10
+
 
 
 
