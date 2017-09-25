@@ -8,6 +8,9 @@ class Sharpie(object):
         self.ink_amount -= 1
 
 sharpie = Sharpie("green", 3.2)
-print(sharpie.color, sharpie.width, sharpie.ink_amount)
+sharpie2 = Sharpie("blue", 1.1)
+sharpie3 = Sharpie("yellow", 1.4)
+sharpie4 = Sharpie("pink", 2.0)
+#print(sharpie.color, sharpie.width, sharpie.ink_amount)
 sharpie.use()
-print(sharpie.color, sharpie.width, sharpie.ink_amount)
+#print(sharpie.color, sharpie.width, sharpie.ink_amount)
