@@ -29,13 +29,35 @@ class DrawEntity:
         self.drawing_entity()
     
     def drawing_entity(self):
-        canvas.create_image(0, 0, anchor = NW, image = self.hero)
+        self.put_entity = canvas.create_image(0, 0, anchor = NW, image = self.hero)
 
     
+
+class Entity(object):
+    def __init__(self):
+        pass
+        
+    def move(self, dx, dy):
+        canvas.move(hero.put_entity, dx, dy )
+
+entities = Entity()
+def moving(e):
+    if (e.keysym == 'Up'):
+        entities.move(0,-72)
+    elif(e.keysym == 'Down'):
+        entities.move(0,72)
+    elif(e.keysym == 'Left'):
+        entities.move(-72,0)
+    elif(e.keysym == 'Right'):
+        entities.move(72,0)
+
+
+root.bind("<KeyPress>", moving)
+
 canvas.pack()
 
 draw_map = DrawMap()
-drawing_entity = DrawEntity()
+hero = DrawEntity()
 canvas.focus_set()
 
 root.mainloop()
