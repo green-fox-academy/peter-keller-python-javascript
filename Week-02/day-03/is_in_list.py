@@ -3,7 +3,7 @@
 # it should return "True" if it contains all, otherwise "False"
 
 list_of_numbers = [2, 4, 6, 8, 10, 12, 14, 16]
-needed_numbers = [4, 8, 12, 16]
+needed_numbers = [4, 8, 12, 12452436]
 result = []
 
 def check(numbers):

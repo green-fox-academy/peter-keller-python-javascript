@@ -6,8 +6,8 @@ from map_file import Map
 root = Tk()
 size = 720
 map = Map()
-root.configure(background ='black')
-canvas = Canvas(root, width=size, height=size,bg="white",bd=0)
+root.configure(background = 'black')
+canvas = Canvas(root, width = size, height = size, bg = "white", bd = 0)
 canvas.pack()
 class DrawMap():
     def __init__(self):

@@ -1,8 +1,5 @@
 # Create a method that decrypts the duplicated-chars.txt
 
-file_name = "duplicated-chars.txt"
-
-
 def decrypt(file_name):
     text = ""
     try:

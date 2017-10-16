@@ -9,5 +9,5 @@ c = 150
 
 surface = ((a+b+c) * 2)
 volume = a * b * c
-print("Surface Area:" +str(surface))
-print("Volume:" +str(volume))
+print("Surface Area: " + str(surface))
+print("Volume: " + str(volume))

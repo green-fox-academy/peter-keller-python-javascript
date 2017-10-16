@@ -2,7 +2,7 @@
 # - Create a function called `doubling` that doubles it's input parameter
 # - Print the result of `doubling(ak)`
 ak = 123
-def doubling(m):
-    return m*2
+def doubling(ak):
+    return ak*2
     
 print(doubling(ak))

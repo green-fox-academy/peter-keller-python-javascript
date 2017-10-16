@@ -4,9 +4,9 @@ n = int(input("Insert number: "))
 
 def factorio(num):
     g = 1
-    for i in range(1,(num+1)):
+    for i in range(1,(num + 1)):
         g = g * i
-    print("Factorio: " ,g)
+    print("Factorio: ", g)
 
 factorio(n)
 

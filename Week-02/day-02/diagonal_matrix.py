@@ -7,13 +7,13 @@
 #   0 0 0 1
 #
 # - Print this two dimensional list to the output
-line = ""
-for i in range(0,4):
-    line=""
-    for j in range(0,4):
+
+for i in range(0, 4):
+    line = ""
+    for j in range(0, 4):
         if i == j:
             line += "1"
         else:
-             line +="0"
-        line+=" "
+             line += "0"
+        line += " "
     print(line)

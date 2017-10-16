@@ -6,7 +6,7 @@
 # So if the word is "apple" and the number is 5, than it should write 5 lines
 # to the file and each line should be "apple"
 # The function should not raise any error if it could not write the file.7
-number = 17
+number = int(input("Please insert a number: "))
 mylist = input("file name: ")
 word = input("Say something: ")
 

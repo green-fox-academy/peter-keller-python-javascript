@@ -8,9 +8,9 @@
 #  John Doe
 #  31
 #  1.87
-name=input("Your name")
-    print(name)
-age=input("Your age")
-    print(age)
-height=input("Your height in meters")
-    print(height)
+name = input("Your name: ")
+age = int(input("Your age: "))
+height = int(input("Your height in meters: "))
+print(name)
+print(age)
+print(height)

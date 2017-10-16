@@ -17,7 +17,7 @@ accounts = [
 
 acc_num = int(input("Account number: "))
 
-def transfer(from_acc, to_acc, amount ):
+def transfer(from_acc, to_acc, amount):
     change_balance(from_acc, = amount)
     change_balance(to_acc, amount)
 
