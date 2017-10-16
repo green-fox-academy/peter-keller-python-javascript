@@ -14,5 +14,5 @@
     width: 150px;
     align-self: center;
     margin-right: 10px;
-
+    justify-content: flex-start;
 }
