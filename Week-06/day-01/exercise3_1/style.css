@@ -1,9 +1,13 @@
 .container {
     background: yellow;
     height: 500px;
-    width: 800px;
+    width: 100%;
     display: flex;
-    margin-left: -50px;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+
 }
 
 .item {
@@ -15,4 +19,5 @@
     align-self: center;
     margin-right: 10px;
     justify-content: flex-start;
+
 }
