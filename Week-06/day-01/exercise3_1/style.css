@@ -1,0 +1,18 @@
+.container {
+    background: yellow;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    margin-left: -50px;
+}
+
+.item {
+    display: flex;
+    background: purple;
+    flex-flow: row;
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    margin-right: 10px;
+
+}
