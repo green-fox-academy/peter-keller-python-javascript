@@ -21,6 +21,8 @@
     color: #515151;
     -webkit-transform: rotate(45deg);
     z-index: 0;
+    
+
 }
 
 p {
@@ -33,7 +35,7 @@ p {
     margin: auto;
     display: table-cell;
     vertical-align: middle;
-    
+    transition: all 0.5s;
 
 }
 
@@ -45,7 +47,8 @@ p {
     border: 3px solid #FF6347;
     align-items: center;
     justify-content: center;
-    
+    transition: all 0.5s;
+
 }
 
 .button:hover {
@@ -60,3 +63,4 @@ p {
     -webkit-transform: rotate(-45deg);
 
 }
+
