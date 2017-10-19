@@ -1,0 +1,48 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: "one green green"
+                         "two green green"
+                         "three four five";
+    grid-gap:10px;
+    margin: 0 auto;
+    max-width: 94%;
+    background:#333333;
+    
+}
+.item{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.one{
+    grid-area: one;
+    background: #B02AFF;
+}
+.two{
+    grid-area: two;
+    background: #B02AFF;
+}
+.three{
+    grid-area: three;
+    background: #B02AFF;
+}
+.four{
+    grid-area: four;
+    background: #B02AFF;
+}
+.five{
+    grid-area: five;
+    background: #B02AFF;
+}
+.green{
+    grid-area: green;
+    background:#51D400;
+}
+.yellow{
+    background:#FFD62A;
+    width: 600px;
+    height: 300px;
+}
