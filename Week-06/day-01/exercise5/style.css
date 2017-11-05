@@ -1,0 +1,55 @@
+.wrapper {
+    background: white;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+}
+
+.mainrow {
+    width: 1000px;
+    height: 100px;
+}
+
+.header {
+    background: #00FFFF;
+
+}
+
+.footer {
+    background: #0000FE;
+    
+}
+
+.content {
+    display: flex;
+    width: 1000px;
+    height: 700px;
+    flex-flow: row;
+
+}
+
+
+.nav1 {
+    background: #FEA500;
+
+    
+}
+
+.nav2 {
+    background: #FE0000;
+
+
+}
+
+.nav3 {
+    background: #81007F;
+
+}
+
+.maincolumn {
+    width: 200px;
+    height: 500px;
+}
