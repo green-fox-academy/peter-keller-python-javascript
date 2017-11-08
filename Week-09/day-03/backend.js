@@ -7,9 +7,12 @@ app.get('/', function(request, response) {
     response.sendFile(__dirname + '/index.html');
 });
 
-app.get("/doubling", function(request, response) {
-    let responseNumber = {"received": request.query.input, "result": request.query.input*2};
-    response.send(JSON.stringify(responseNumber));
+app.get('/doubling', function(request, response) {
+    let responseAnswer = {"error": "Gimme num"};
+    if (request.query.input !== undefined) { 
+        responseAnswer = {"received": request.query.input*1, "result": request.query.input*2};
+    }
+    response.json(responseAnswer);
 });
 
 app.listen(8080);
