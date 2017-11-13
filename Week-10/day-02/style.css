@@ -1,0 +1,45 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #F5F5F5;
+    display: flex;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    font-size: 20px;
+    grid-area: left;
+}
+
+.right {
+    display: inline-flex;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.playlist {
+    font-size: 30px;
+}
+
+.albumpicture {
+    width: 160px;
+    height: 160px;
+    background: url("assets/music-placeholder.png");
+    background-size: contain;
+    float:right;
+    
+}
+
