@@ -30,21 +30,19 @@ app.get('/', function(request, response) {
 });
 
 app.get('/list', function(request, response) {
-    connection.query(books, function(err, rows) {
+    connection.query('SELECT book_name FROM book_mast', function(err, rows) {
+        //console.log(rows)
         if (err) {
             console.log(err.toString());
             return;
-    };
-    console.log("Data received from database");
-    let htmlString = '<ul>';
-    rows.forEach(function(row) {
-        htmlString = htmlString + "<li>" + row.book_name + "</li>";
+        };
+        response.send(rows)
     });
-    htmlString = htmlString + "</ul>";
-    response.send(htmlString);
+    
+    console.log("Data received from database");
     });
 
-});
+
 
 app.get('/booksdata', function(request, response) {
     connection.query(books, function(err, rows) {
@@ -62,17 +60,25 @@ app.get('/booksdata', function(request, response) {
     });
 });
 
-app.get('/books', function(request, response) {
-    books += 'WHERE cate_descrip = "' + request.query.category + '";';  
-    connection.query(books, function(err, rows) {
-        if (err) {
-            console.log(err.toString());
-            return;
-    };
-    console.log("Selected data received from database");
 
-    response.send(rows);
-});
-});
+//app.get('/books', function(request, response) {
+//    connection.query(place, function(err, rows) {
+    //    if (err) {
+  //          console.log(err.toString());
+//            return;
+ //       } else if (request.query.category) {
+            
+//        }
+//        console.log(request.query.category)
+       //console.log(rows)
+//    let result = '<ul>'
+//    rows.forEach(function(row) {
+//        result = result += '<li>' + row.book_name + '</li>' ;
+//    });
+//    result = result + '</ul>';
+//    console.log("Selected data received from database");
 
+//    response.send(result);
+//});
+//});
 app.listen(3000);

@@ -1,17 +1,36 @@
 'use strict'
 
 let url = "http://localhost:3000";
-let bodyElement = document.querySelector('body');
-let connectionObject = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 
-function talkToApi(method, resource){
-    connectionObject.open(method, url + resource, true);
-    connectionObject.onload = function(){
-        let div = document.createElement('div');
-        div.innerHTML = connectionObject.response;
-        bodyElement.appendChild(div);
-    }
-    connectionObject.send();
-}
+function talkToApi(method, resource, callback){
+    xhr.open(method, url + resource, true);
+    xhr.onload = function(){
+        callback(xhr.response);
+    };
+    xhr.send();
+};
 
-talkToApi('GET', '/list');
+talkToApi('GET', '/list', createList);
+
+function createList(response) {
+    console.log(response)
+    let newList = JSON.parse(response);
+    console.log(newList)
+    let unorderedList = "<ul>";
+    newList.forEach(function(element) {
+        unorderedList = unorderedList + "<li>" + element.book_name + "</li>";
+    });
+    unorderedList = unorderedList + "</ul>";
+};
+
+
+
+//function createElement () {
+//    let div = document.createElement('div');
+//    div.innerHTML = connectionObject.response;
+//    bodyElement.appendChild(div);
+//}
+
+
+
