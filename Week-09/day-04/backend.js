@@ -55,24 +55,24 @@ app.get('/booksdata', function(request, response) {
 });
 
 
-//app.get('/books', function(request, response) {
-//    connection.query(place, function(err, rows) {
-    //    if (err) {
-  //          console.log(err.toString());
-//            return;
- //       } else if (request.query.category) {
-            
-//        }
-//        console.log(request.query.category);
-       //console.log(rows);
-//    let result = '<ul>'
-//    rows.forEach(function(row) {
-//        result = result += '<li>' + row.book_name + '</li>' ;
-//    });
-//    result = result + '</ul>';
-//    console.log("Selected data received from database");
+app.get('/books', function(request, response) {
+    connection.query(books, function(err, rows) {
+        books = 'SELECT book_name, aut_name, cate_descrip, pub_name, book_price FROM book_mast JOIN author ON book_mast.aut_id = author.aut_id JOIN category ON book_mast.cate_id = category.cate_id JOIN publisher ON book_mast.pub_id = publisher.pub_id ';
+        
+        if (err) {
+            console.log(err.toString());
+        } else if (request.query.category) {
+            books = books + 'WHERE cate_descrip = "' + request.query.category + '";';
+        }
+        let result = '<ul>'
+        rows.forEach(function(element) {
+            result = result += '<li>' + element.book_name + '</li>' ;
+        });
+        result = result + '</ul>';
+        console.log("Selected data received from database");
 
-//    response.send(result);
-//});
-//});
+        response.send(result);
+    });
+});
+
 app.listen(3000);
