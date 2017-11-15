@@ -39,3 +39,10 @@ function createList(response) {
 };
 
 
+function listDetails(response) {
+    let information = JSON.parse(response);
+    information.books.forEach(function(element) {
+        const listData = '<tr><td>' + element.book_name + '</td><td>' + element.aut_name + '</td><td>' + element.cate_descrip + '</td><td>' + element.pub_name + '</td><td>' + element.book_price + '</td></tr>';
+        tableElement.innerHTML += listData;
+    });
+};
