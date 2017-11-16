@@ -3,21 +3,29 @@
 let url = "http://localhost:3000";
 let xhr = new XMLHttpRequest();
 let ulElement = document.querySelector('ul');
-let tableElement = document.querySelector('table');
+let tableElement = document.querySelector('tbody');
 
 function talkToApi(method, resource, callback){
     xhr.open(method, url + resource, true);
     xhr.onload = function(){
-        callback(xhr.response);
+        callback(JSON.parse(xhr.response));
     };
     xhr.send();
 };
 
-talkToApi('GET', '/booksdata', listDetails);
-
-// more difficult solution:
+talkToApi('GET', '/books?category=Science', listByFilter);    
 
 /*
+if (document.location.href.indexOf("list") == -1) {
+    talkToApi('GET', '/booksdata', listDetails);
+} else { 
+    talkToApi('GET', '/list', createList);    
+};
+*/
+
+/*
+ correct solution:
+
 function createList(response) {
     let newList = JSON.parse(response);
     newList.books.forEach(function(element) {
@@ -26,13 +34,13 @@ function createList(response) {
         `
         ulElement.innerHTML += template;
     });
-}; */
+};
+easier solution: 
+*/
 
-// easier solution:
 
 function createList(response) {
-    let items = JSON.parse(response);
-    items.books.forEach(function(element) {
+    response.books.forEach(function(element) {
         const listItems = '<li>' + element.book_name + '</li>';
         ulElement.innerHTML += listItems;
     });
@@ -40,9 +48,21 @@ function createList(response) {
 
 
 function listDetails(response) {
-    let information = JSON.parse(response);
-    information.books.forEach(function(element) {
-        const listData = '<tr><td>' + element.book_name + '</td><td>' + element.aut_name + '</td><td>' + element.cate_descrip + '</td><td>' + element.pub_name + '</td><td>' + element.book_price + '</td></tr>';
+    response.books.forEach(function(element) {
+        const listData = '<tr><td>' + element.book_name +
+                         '</td><td>' + element.aut_name +
+                         '</td><td>' + element.cate_descrip +
+                         '</td><td>' + element.pub_name +
+                         '</td><td>' + element.book_price +
+                         '</td></tr>';
         tableElement.innerHTML += listData;
+    });
+};
+
+
+function listByFilter(response) {
+    response.forEach(function(elements) {
+        const listedData = '<li>' + elements.book_name + '</li>';
+        ulElement.innerHTML += listedData;
     });
 };
