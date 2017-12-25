@@ -13,6 +13,6 @@
 # 8 * 15 = 120
 # 9 * 15 = 135
 # 10 * 15 = 150
-number = int(input("What number would you like to multiply? "))
+number = int(input("Number to multiply: "))
 for x in range (1,11):
-    print(str (number) + '*' + str(x) + "=" + str(number * x))
+    print(str (number) + ' * ' + str(x) + " = " + str(number * x))
