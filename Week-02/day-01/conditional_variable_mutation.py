@@ -7,8 +7,6 @@ if 24 % 2 == 0:
 print(out)
 
 
-
-
 b = 13
 out2 = ""
 # if b is between 10 and 20 set out2 to "Sweet!"
@@ -24,7 +22,6 @@ else:
 print(out2)
 
 
-
 c = 123
 credits = 100
 is_bonus = False
@@ -38,10 +35,7 @@ if credits >= 50 and is_bonus == False:
 elif credits < 50 and is_bonus == False:
     c -= 1
 
-
 print(c)
-
-
 
 
 d = 8
