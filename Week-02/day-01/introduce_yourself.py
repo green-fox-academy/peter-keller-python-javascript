@@ -10,7 +10,4 @@
 #  1.87
 name = input("Your name: ")
 age = int(input("Your age: "))
-height = int(input("Your height in meters: "))
-print(name)
-print(age)
-print(height)
+height = float(input("Your height in meters: "))
