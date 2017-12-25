@@ -11,10 +11,10 @@
 # 3
 # 4
 # 5
-num1 = int(input())
-num2 = int(input())
-if num2 <= num1:
+starting_number = int(input("Starting number: "))
+ending_number = int(input("Last number: "))
+if ending_number <= starting_number:
     print("The second number should be bigger")
 else:
-    for i in range(num1,num2):
+    for i in range(starting_number, ending_number + 1):
         print(i)
