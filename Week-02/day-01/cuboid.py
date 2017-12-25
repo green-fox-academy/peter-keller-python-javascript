@@ -3,11 +3,11 @@
 # 
 # Surface Area: 600
 # Volume: 1000
-a = 200
-b = 300
-c = 150
+a = 20
+b = 30
+c = 15
 
-surface = ((a+b+c) * 2)
+surface = ((a + b + c) * 2)
 volume = a * b * c
 print("Surface Area: " + str(surface))
 print("Volume: " + str(volume))
