@@ -8,4 +8,3 @@ words = ["What", "I", "do", "create,", "I", "cannot", "not", "understand."]
 a, b = words.index("do"), words.index("cannot")
 words[b], words[a] = words[a], words[b]
 print(words)
-
