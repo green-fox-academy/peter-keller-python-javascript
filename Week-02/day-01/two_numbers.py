@@ -19,4 +19,3 @@ print(divide)
 # Print the reminder of 22 divided by 13
 divide = a % b
 print(divide)
-
