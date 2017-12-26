@@ -1,9 +1,11 @@
 # - Write a function called `sum` that sum all the numbers
 #   until the given parameter
-n = int(input("Please insert a number "))
+sum_to = int(input("Please insert a number: "))
 
-def sum(num):
-    for i in range(1, num):
+
+def sum_numbers(numbers):
+    for i in range(1, numbers):
         print(i)
 
-sum(n)
+
+sum_numbers(sum_to)
