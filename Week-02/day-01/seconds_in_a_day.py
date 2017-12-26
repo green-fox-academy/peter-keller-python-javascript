@@ -12,4 +12,3 @@ currentminute = 34 * 60
 currenttime = currenthour + currentminute + current_seconds
 remaining = (secondsaday - currenttime)
 print(remaining)
-
