@@ -2,9 +2,12 @@
 # The function reverses it and returns with the reversed string
 
 
-reverse = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI"
+reverse = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI"  # nopep8
+
+
 def reverse_string(reversed):
     n = reversed[::-1]
     print(n)
+
 
 reverse_string(reverse)
