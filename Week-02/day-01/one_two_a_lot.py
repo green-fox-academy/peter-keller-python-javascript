@@ -3,7 +3,7 @@
 # If the number is one it should print: One
 # If the number is two it should print: Two
 # If the number is more than two it should print: A lot
-number = int(input("Please give me a number"))
+number = int(input("Please give me a number: "))
 if number <= 0:
     print("Not enough")
 elif number == 1: 
