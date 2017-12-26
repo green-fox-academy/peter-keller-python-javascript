@@ -3,7 +3,10 @@
 #     - Greeting is printing e.g. `Greetings, dear Greenfox`
 # - Greet `al`
 al = "Greenfox"
-def greet(g):
-    print("Greetings, dear " + g)
+
+
+def greet(person):
+    print("Greetings, dear " + person)
+
 
 greet(al)
