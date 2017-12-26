@@ -10,21 +10,24 @@ students = [
 # create a function that takes a list of students and prints:
 # - Who has got more candies than 4 candies
 
-# create a function that takes a list of students and prints: 
+# create a function that takes a list of students and prints:
 #  - how many candies they have on average
+
 
 def candies():
     names = []
     for line in students:
         names.append(line['name'])
         if line['candies'] > 4:
-            print(line['name'] + " has more than the given amount, he/she has " + str(line['candies']) + " candies")
+            print(line['name'] + " has more than the given amount, he/she has " + str(line['candies']) + " candies")  # nopep8
+
 
 def average():
     summ = 0
     for line in students:
         summ += line['candies']
-    print("Average: " , summ/4)
+    print("Average: ", summ / 4)
+
 
 candies()
 average()
