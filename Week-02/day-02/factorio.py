@@ -11,3 +11,13 @@ def factorio(num):
 
 
 factorio(n)
+
+
+def recursive_factorio(number):
+    if number == 1:
+        return 1
+    else:
+        return number * recursive_factorio(number - 1)
+
+
+print(recursive_factorio(5))
