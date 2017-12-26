@@ -3,8 +3,17 @@
 #   and appends an 'a' character to its end
 # - Print the result of `appendA(am)`
 am = 'kuty'
-def appendA(a):
-    n = list(a)
+
+
+def appendA(word):
+    n = list(word)
     n.append('a')
-    print(n)
-appendA(am)
+    return n
+
+print(appendA(am))
+
+
+def append_letter(word):
+    return word + "a"
+
+print(append_letter(am))
