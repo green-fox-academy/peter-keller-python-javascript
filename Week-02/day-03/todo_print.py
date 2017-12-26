@@ -10,5 +10,5 @@
 #      - Diablo
 
 todoText = " - Buy milk\n"
-todoText = todoText[:0] + "My todo:\n" + todoText[0:] + " - Download Games\n" + " - Diablo "
+todoText = todoText[:0] + "My todo:\n" + todoText[0:] + " - Download Games\n" + " - Diablo "  # nopep8
 print(todoText)
