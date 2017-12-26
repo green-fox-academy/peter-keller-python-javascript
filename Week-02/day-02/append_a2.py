@@ -7,4 +7,3 @@ li = ["kuty", "macsk", "cic"]
 for i in range(0,len(li)):
     li[i] += "a"
     print(li[i])
-
