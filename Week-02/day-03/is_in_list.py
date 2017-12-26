@@ -6,6 +6,7 @@ list_of_numbers = [2, 4, 6, 8, 10, 12, 14, 16]
 needed_numbers = [4, 8, 12, 12452436]
 result = []
 
+
 def check(numbers):
     for i in range(len(needed_numbers)):
         result.append(False)
@@ -16,9 +17,9 @@ def check(numbers):
                 result[i] = True
         i += 1
     for answer in result:
-        if answer == False:
+        if answer is False:
             return False
         return True
-    
-print(check(list_of_numbers))
 
+
+print(check(list_of_numbers))
