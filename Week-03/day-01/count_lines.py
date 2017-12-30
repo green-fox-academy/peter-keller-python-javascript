@@ -17,4 +17,5 @@ def count_lines():
     except FileNotFoundError:
         return 0
 
+
 print(count_lines())
