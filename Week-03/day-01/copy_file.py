@@ -2,24 +2,21 @@
 # It should take the filenames as parameters
 # It should return a boolean that shows if the copy was successful
 
-original_file = "sample.txt"
-file_to_copy = "sample2.txt"
+original_file = "day-01/sample.txt"
+file_to_copy = "day-01/sample2.txt"
+
 
 def copy_file():
     flag = True
     try:
-        original_file_open = open(original_file, 'r')
-        text = original_file_open.read
-
-        file_to_copy_open = open(file_to_copy, 'w')
-        file_to_copy_open.write(text)
-
-        original_file_open.close()
-        file_to_copy_open.close()
-
+        with open(original_file, 'r') as file:
+            text = file.read()
+        with open(file_to_copy, 'w') as file1:
+            file1.write(text)
         print(flag)
     except FileNotFoundError:
         flag = False
         print(flag)
+
 
 copy_file()
