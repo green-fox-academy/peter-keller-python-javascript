@@ -7,12 +7,14 @@ file_to_read = "day-01/single-chars.txt"
 
 
 def count_lines():
+    lines = 0
     try:
         with open(file_to_read, 'r') as file:
-            num_lines = sum(1 for line in file)
-        return num_lines
+            for line in file:
+                if len(line) >= 2:
+                    lines += 1
+            return lines
     except FileNotFoundError:
-        return "Unable to read file: " + file_to_read
-
+        return 0
 
 print(count_lines())
